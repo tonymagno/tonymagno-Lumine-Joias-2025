@@ -2,7 +2,9 @@
    Lumine Joias - style.css
    Premium, limpo e responsivo
    =============================== */
-
+.destaque {
+  background: #25D366;
+}
 * {
   box-sizing: border-box;
   margin: 0;
