@@ -1,69 +1,113 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Colar - Lumine Joias</title>
 <meta name="description" content="Categoria de Colar da Lumine Joias. Peças exclusivas com garantia.">
 <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-<header><div class="logo">Lumine Joias</div><div><a class="btn" href="index.html">Voltar</a> <span class="cart-indicator">Carrinho: <span id="cart-count">0</span></span></div></header>
-<section class="section"><h2>Colar</h2><div class="product-grid">
+
+<header>
+  <div class="logo">Lumine Joias</div>
+  <div>
+    <a class="btn" href="index.html">Voltar</a>
+    <a href="carrinho.html" class="cart-indicator">
+      Carrinho: <span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Colar</h2>
+
+  <div class="product-grid">
+
     <div class="product-item">
       <img src="fotos/colar/colar1.jpeg" alt="Colar 1"/>
       <h3>Colar 1</h3>
-      <p class="small-note">Valor: R$=79.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 1')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 79,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 1', 79.90, 'fotos/colar/colar1.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar2.jpeg" alt="Colar 2"/>
       <h3>Colar 2</h3>
-      <p class="small-note">Valor: R$=74.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 2')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 74,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 2', 74.90, 'fotos/colar/colar2.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar3.jpeg" alt="Colar 3"/>
       <h3>Colar 3</h3>
-      <p class="small-note">Valor: R$=85.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 3')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 85,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 3', 85.90, 'fotos/colar/colar3.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar4.jpeg" alt="Colar 4"/>
       <h3>Colar 4</h3>
-      <p class="small-note">Valor: R$=93.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 4')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 93,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 4', 93.90, 'fotos/colar/colar4.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar5.jpeg" alt="Colar 5"/>
       <h3>Colar 5</h3>
-      <p class="small-note">Valor: R$=139.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 5')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 139,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 5', 139.90, 'fotos/colar/colar5.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar6.jpeg" alt="Colar 6"/>
       <h3>Colar 6</h3>
-      <p class="small-note">Valor: R$=119.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 6')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 119,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 6', 119.90, 'fotos/colar/colar6.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar7.jpeg" alt="Colar 7"/>
       <h3>Colar 7</h3>
-      <p class="small-note">Valor: R$=30.90</p>
-      <button class="add-btn" onclick="addToCart('Colar 7')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 30,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 7', 30.90, 'fotos/colar/colar7.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar8.jpeg" alt="Colar 8"/>
       <h3>Colar 8</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Colar 8')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 89,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 8', 89.90, 'fotos/colar/colar8.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/colar/colar9.jpeg" alt="Colar 9"/>
       <h3>Colar 9</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Colar 9')">Adicionar ao Carrinho</button>
-    </div></div></section>
-<div style="text-align:center;padding:20px"><button class="btn" onclick="finalizeOrder()">Finalizar Pedido</button> <button class="btn" onclick="clearCart()">Limpar Carrinho</button></div>
-<footer class="footer"><p>© 2025 Lumine Joias</p></footer>
+      <p class="small-note">Valor: R$ 95,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Colar 9', 95.90, 'fotos/colar/colar9.jpeg')">Adicionar ao Carrinho</button>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align:center;padding:20px">
+  <a class="btn" href="carrinho.html">Abrir Carrinho</a>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Lumine Joias</p>
+</footer>
+
+<a
+  href="https://wa.me/5512978135300?text=Olá!%20Vim%20pelo%20site%20Lumine%20Joias."
+  class="whatsapp-float"
+  target="_blank"
+>
+  💬
+</a>
+
 <script src="carrinho.js"></script>
-</body></html>
+
+</body>
+</html>
