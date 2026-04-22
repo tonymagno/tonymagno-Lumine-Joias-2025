@@ -1,111 +1,162 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Pingente - Lumine Joias</title>
 <meta name="description" content="Categoria de Pingente da Lumine Joias. Peças exclusivas com garantia.">
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header><div class="logo">Lumine Joias</div><div><a class="btn" href="index.html">Voltar</a> <span class="cart-indicator">Carrinho: <span id="cart-count">0</span></span></div></header>
-<section class="section"><h2>Pingente</h2><div class="product-grid">
+
+<header>
+  <div class="logo">Lumine Joias</div>
+  <div>
+    <a class="btn" href="index.html">Voltar</a>
+    <a href="carrinho.html" class="cart-indicator">
+      Carrinho: <span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Pingente</h2>
+
+  <div class="product-grid">
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente1.jpg" alt="Pingente 1"/>
       <h3>Pingente 1</h3>
-      <p class="small-note">Valor: R$=28.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 1')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 28,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 1', 28.90, 'fotos/pingentes/pingente1.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente2.jpg" alt="Pingente 2"/>
       <h3>Pingente 2</h3>
-      <p class="small-note">Valor: R$=9.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 2')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 9,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 2', 9.90, 'fotos/pingentes/pingente2.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente3.jpg" alt="Pingente 3"/>
       <h3>Pingente 3</h3>
-      <p class="small-note">Valor: R$=8.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 3')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 8,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 3', 8.90, 'fotos/pingentes/pingente3.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente4.jpg" alt="Pingente 4"/>
       <h3>Pingente 4</h3>
-      <p class="small-note">Valor: R$=44.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 4')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 44,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 4', 44.90, 'fotos/pingentes/pingente4.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente5.jpg" alt="Pingente 5"/>
       <h3>Pingente 5</h3>
-      <p class="small-note">Valor: R$=21.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 5')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 21,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 5', 21.90, 'fotos/pingentes/pingente5.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente6.jpg" alt="Pingente 6"/>
       <h3>Pingente 6</h3>
-      <p class="small-note">Valor: R$=12.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 6')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 12,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 6', 12.90, 'fotos/pingentes/pingente6.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente7.jpg" alt="Pingente 7"/>
       <h3>Pingente 7</h3>
-      <p class="small-note">Valor: R$=15.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 7')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 15,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 7', 15.90, 'fotos/pingentes/pingente7.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente8.jpg" alt="Pingente 8"/>
       <h3>Pingente 8</h3>
-      <p class="small-note">Valor: R$=27.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 8')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 27,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 8', 27.90, 'fotos/pingentes/pingente8.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente9.jpg" alt="Pingente 9"/>
       <h3>Pingente 9</h3>
-      <p class="small-note">Valor: R$=12.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 9')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 12,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 9', 12.90, 'fotos/pingentes/pingente9.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente10.jpg" alt="Pingente 10"/>
       <h3>Pingente 10</h3>
-      <p class="small-note">Valor: R$=11.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 10')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 11,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 10', 11.90, 'fotos/pingentes/pingente10.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente11.jpg" alt="Pingente 11"/>
       <h3>Pingente 11</h3>
-      <p class="small-note">Valor: R$=9.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 11')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 9,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 11', 9.90, 'fotos/pingentes/pingente11.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente12.jpg" alt="Pingente 12"/>
       <h3>Pingente 12</h3>
-      <p class="small-note">Valor: R$=30.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 12')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 30,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 12', 30.90, 'fotos/pingentes/pingente12.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente13.jpg" alt="Pingente 13"/>
       <h3>Pingente 13</h3>
-      <p class="small-note">Valor: R$=26.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 13')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 26,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 13', 26.90, 'fotos/pingentes/pingente13.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente14.jpg" alt="Pingente 14"/>
       <h3>Pingente 14</h3>
-      <p class="small-note">Valor: R$=27.90</p>
-      <button class="add-btn" onclick="addToCart('Pingente 14')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 27,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 14', 27.90, 'fotos/pingentes/pingente14.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente15.jpg" alt="Pingente 15"/>
       <h3>Pingente 15</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Pingente 15')">Adicionar ao Carrinho</button>
-    </div> 
+      <p class="small-note">Valor: R$ 24,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 15', 24.90, 'fotos/pingentes/pingente15.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
     <div class="product-item">
       <img src="fotos/pingentes/pingente16.jpg" alt="Pingente 16"/>
       <h3>Pingente 16</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Pingente 16')">Adicionar ao Carrinho</button>
-    </div></div></section>
-<div style="text-align:center;padding:20px"><button class="btn" onclick="finalizeOrder()">Finalizar Pedido</button> <button class="btn" onclick="clearCart()">Limpar Carrinho</button></div>
-<footer class="footer"><p>© 2025 Lumine Joias</p></footer>
+      <p class="small-note">Valor: R$ 18,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Pingente 16', 18.90, 'fotos/pingentes/pingente16.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align:center;padding:20px">
+  <a class="btn" href="carrinho.html">Abrir Carrinho</a>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Lumine Joias</p>
+</footer>
+
+<a
+  href="https://wa.me/5512978135300?text=Olá!%20Vim%20pelo%20site%20Lumine%20Joias."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp"
+>
+  💬
+</a>
+
 <script src="carrinho.js"></script>
-</body></html>
+</body>
+</html>
