@@ -399,3 +399,62 @@ header > div:last-child {
   border-radius: 6px;
   cursor: pointer;
 }
+/* ===============================
+   CARRINHO PROFISSIONAL
+   =============================== */
+
+.item-carrinho {
+  display: flex;
+  gap: 16px;
+  background: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.item-carrinho img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.item-carrinho-info {
+  text-align: left;
+  flex: 1;
+}
+
+.qtd-controle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.qtd-controle button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: #C8A97E;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.remover-btn {
+  margin-top: 8px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.remover-btn:hover {
+  filter: brightness(0.95);
+}
