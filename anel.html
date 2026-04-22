@@ -1,123 +1,174 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Anel - Lumine Joias</title>
-<meta name="description" content="Categoria de Anel da Lumine Joias. Peças exclusivas com garantia.">
-<link rel="stylesheet" href="style.css"/>
+<meta name="description" content="Categoria de Anel da Lumine Joias. Peças exclusivas com garantia." />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header><div class="logo">Lumine Joias</div><div><a class="btn" href="index.html">Voltar</a> <span class="cart-indicator">Carrinho: <span id="cart-count">0</span></span></div></header>
-<section class="section"><h2>Anel</h2><div class="product-grid">
+
+<header>
+  <div class="logo">Lumine Joias</div>
+  <div>
+    <a class="btn" href="index.html">Voltar</a>
+    <a href="carrinho.html" class="cart-indicator">Carrinho: <span id="cart-count">0</span></a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Anel</h2>
+
+  <div class="product-grid">
+
     <div class="product-item">
       <img src="fotos/aneis/anel1.jpeg" alt="Anel 1"/>
       <h3>Anel 1</h3>
-      <p class="small-note">Valor: R$=58.90 </p>
-      <button class="add-btn" onclick="addToCart('Anel 1')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 58,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 1', 58.90, 'fotos/aneis/anel1.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel2.jpeg" alt="Anel 2"/>
       <h3>Anel 2</h3>
-      <p class="small-note">Valor: R$=52.90</p> 
-      <button class="add-btn" onclick="addToCart('Anel 2')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 52,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 2', 52.90, 'fotos/aneis/anel2.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel3.jpeg" alt="Anel 3"/>
       <h3>Anel 3</h3>
-      <p class="small-note">Valor: R$=99.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 3')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 99,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 3', 99.90, 'fotos/aneis/anel3.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel4.jpeg" alt="Anel 4"/>
       <h3>Anel 4</h3>
-      <p class="small-note">Valor: R$=69.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 4')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 69,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 4', 69.90, 'fotos/aneis/anel4.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel5.jpeg" alt="Anel 5"/>
       <h3>Anel 5</h3>
-      <p class="small-note">Valor: R$=51.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 5')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 51,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 5', 51.90, 'fotos/aneis/anel5.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel6.jpeg" alt="Anel 6"/>
       <h3>Anel 6</h3>
-      <p class="small-note">Valor: R$=68.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 6')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 68,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 6', 68.90, 'fotos/aneis/anel6.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel7.jpeg" alt="Anel 7"/>
       <h3>Anel 7</h3>
-      <p class="small-note">Valor: R$=98.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 7')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 98,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 7', 98.90, 'fotos/aneis/anel7.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel8.jpeg" alt="Anel 8"/>
       <h3>Anel 8</h3>
-      <p class="small-note">Valor: R$=49.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 8')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 49,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 8', 49.90, 'fotos/aneis/anel8.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel9.jpeg" alt="Anel 9"/>
       <h3>Anel 9</h3>
-      <p class="small-note">Valor: R$=54.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 9')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 54,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 9', 54.90, 'fotos/aneis/anel9.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel10.jpeg" alt="Anel 10"/>
       <h3>Anel 10</h3>
-      <p class="small-note">Valor: R$=66.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 10')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 66,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 10', 66.90, 'fotos/aneis/anel10.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel11.jpeg" alt="Anel 11"/>
       <h3>Anel 11</h3>
-      <p class="small-note">Valor: R$=48.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 11')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 48,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 11', 48.90, 'fotos/aneis/anel11.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel12.jpeg" alt="Anel 12"/>
       <h3>Anel 12</h3>
-      <p class="small-note">Valor: R$=51.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 12')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 51,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 12', 51.90, 'fotos/aneis/anel12.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel13.jpeg" alt="Anel 13"/>
       <h3>Anel 13</h3>
-      <p class="small-note">Valor: R$=67.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 13')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 67,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 13', 67.90, 'fotos/aneis/anel13.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel14.jpeg" alt="Anel 14"/>
       <h3>Anel 14</h3>
-      <p class="small-note">Valor: R$=63.90</p>
-      <button class="add-btn" onclick="addToCart('Anel 14')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 63,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 14', 63.90, 'fotos/aneis/anel14.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel15.jpeg" alt="Anel 15"/>
       <h3>Anel 15</h3>
-      <p class="small-note">Valor: R$=</p>
-      <button class="add-btn" onclick="addToCart('Anel 15')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 59,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 15', 59.90, 'fotos/aneis/anel15.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel16.jpeg" alt="Anel 16"/>
       <h3>Anel 16</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Anel 16')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 72,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 16', 72.90, 'fotos/aneis/anel16.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel17.jpeg" alt="Anel 17"/>
       <h3>Anel 17</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Anel 17')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 74,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 17', 74.90, 'fotos/aneis/anel17.jpeg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
       <img src="fotos/aneis/anel18.jpeg" alt="Anel 18"/>
       <h3>Anel 18</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Anel 18')">Adicionar ao Carrinho</button>
-    </div></div></section>
-<div style="text-align:center;padding:20px"><button class="btn" onclick="finalizeOrder()">Finalizar Pedido</button> <button class="btn" onclick="clearCart()">Limpar Carrinho</button></div>
-<footer class="footer"><p>© 2025 Lumine Joias</p></footer>
+      <p class="small-note">Valor: R$ 61,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Anel 18', 61.90, 'fotos/aneis/anel18.jpeg')">Adicionar ao Carrinho</button>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align:center;padding:20px">
+  <a class="btn" href="carrinho.html">Abrir Carrinho</a>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Lumine Joias</p>
+</footer>
+
+<a
+  href="https://wa.me/5512978135300?text=Olá!%20Vim%20pelo%20site%20Lumine%20Joias."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp"
+>
+  💬
+</a>
+
 <script src="carrinho.js"></script>
-</body></html>
+</body>
+</html>
