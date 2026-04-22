@@ -1,10 +1,19 @@
 // ===============================
-// CARRINHO PROFISSIONAL LUMINE
+// LUMINE JOIAS - CARRINHO PROFISSIONAL
 // ===============================
 
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-// ADICIONAR PRODUTO
+function salvarCarrinho() {
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
+function atualizarContador() {
+  const totalItens = carrinho.reduce((acc, item) => acc + item.qtd, 0);
+  const el = document.getElementById("cart-count");
+  if (el) el.innerText = totalItens;
+}
+
 function adicionarCarrinho(nome, preco, imagem) {
   const itemExistente = carrinho.find(item => item.nome === nome);
 
@@ -12,9 +21,9 @@ function adicionarCarrinho(nome, preco, imagem) {
     itemExistente.qtd += 1;
   } else {
     carrinho.push({
-      nome,
-      preco,
-      imagem,
+      nome: nome,
+      preco: Number(preco),
+      imagem: imagem,
       qtd: 1
     });
   }
@@ -24,97 +33,106 @@ function adicionarCarrinho(nome, preco, imagem) {
   alert("Produto adicionado ao carrinho!");
 }
 
-// SALVAR
-function salvarCarrinho() {
-  localStorage.setItem("carrinho", JSON.stringify(carrinho));
-}
-
-// CONTADOR
-function atualizarContador() {
-  const total = carrinho.reduce((acc, item) => acc + item.qtd, 0);
-  const el = document.getElementById("cart-count");
-  if (el) el.innerText = total;
-}
-
-// REMOVER ITEM
 function removerItem(index) {
   carrinho.splice(index, 1);
   salvarCarrinho();
   renderCarrinho();
+  atualizarContador();
 }
 
-// ALTERAR QUANTIDADE
-function alterarQtd(index, tipo) {
-  if (tipo === "mais") carrinho[index].qtd++;
-  if (tipo === "menos" && carrinho[index].qtd > 1) carrinho[index].qtd--;
+function alterarQtd(index, acao) {
+  if (acao === "mais") {
+    carrinho[index].qtd += 1;
+  } else if (acao === "menos") {
+    if (carrinho[index].qtd > 1) {
+      carrinho[index].qtd -= 1;
+    }
+  }
 
   salvarCarrinho();
   renderCarrinho();
+  atualizarContador();
 }
 
-// RENDERIZAR CARRINHO
 function renderCarrinho() {
   const lista = document.getElementById("lista-carrinho");
   const totalEl = document.getElementById("total");
 
-  if (!lista) return;
+  if (!lista || !totalEl) return;
 
   lista.innerHTML = "";
-  let total = 0;
+
+  let totalGeral = 0;
+
+  if (carrinho.length === 0) {
+    lista.innerHTML = "<p>Seu carrinho está vazio.</p>";
+    totalEl.innerText = "Total: R$ 0,00";
+    return;
+  }
 
   carrinho.forEach((item, index) => {
     const subtotal = item.preco * item.qtd;
-    total += subtotal;
+    totalGeral += subtotal;
 
     lista.innerHTML += `
       <div class="item-carrinho">
         <img src="${item.imagem}" alt="${item.nome}">
-        <div>
+        <div class="item-carrinho-info">
           <h4>${item.nome}</h4>
-          <p>R$ ${item.preco.toFixed(2)}</p>
+          <p>Valor unitário: R$ ${item.preco.toFixed(2).replace(".", ",")}</p>
 
-          <div class="qtd">
+          <div class="qtd-controle">
             <button onclick="alterarQtd(${index}, 'menos')">-</button>
             <span>${item.qtd}</span>
             <button onclick="alterarQtd(${index}, 'mais')">+</button>
           </div>
 
-          <p><strong>Subtotal: R$ ${subtotal.toFixed(2)}</strong></p>
-          <button class="remover" onclick="removerItem(${index})">Remover</button>
+          <p><strong>Subtotal: R$ ${subtotal.toFixed(2).replace(".", ",")}</strong></p>
+
+          <button class="remover-btn" onclick="removerItem(${index})">Remover</button>
         </div>
       </div>
     `;
   });
 
-  totalEl.innerText = "Total: R$ " + total.toFixed(2);
+  totalEl.innerText = "Total: R$ " + totalGeral.toFixed(2).replace(".", ",");
 }
 
-// ENVIAR PARA WHATSAPP
 function enviarWhats() {
   if (carrinho.length === 0) {
     alert("Seu carrinho está vazio!");
     return;
   }
 
-  let mensagem = "Olá! Quero finalizar meu pedido:\n\n";
-  let total = 0;
+  let mensagem = "Olá! Gostaria de finalizar meu pedido na Lumine Joias.%0A%0A";
+  let totalGeral = 0;
 
   carrinho.forEach(item => {
     const subtotal = item.preco * item.qtd;
-    total += subtotal;
+    totalGeral += subtotal;
 
-    mensagem += `• ${item.nome}\n`;
-    mensagem += `Qtd: ${item.qtd}\n`;
-    mensagem += `Valor: R$ ${item.preco.toFixed(2)}\n`;
-    mensagem += `Subtotal: R$ ${subtotal.toFixed(2)}\n\n`;
+    mensagem += `• ${item.nome}%0A`;
+    mensagem += `Qtd: ${item.qtd}%0A`;
+    mensagem += `Valor unitário: R$ ${item.preco.toFixed(2).replace(".", ",")}%0A`;
+    mensagem += `Subtotal: R$ ${subtotal.toFixed(2).replace(".", ",")}%0A%0A`;
   });
 
-  mensagem += `Total do pedido: R$ ${total.toFixed(2)}`;
+  mensagem += `Total do pedido: R$ ${totalGeral.toFixed(2).replace(".", ",")}`;
 
-  const url = "https://wa.me/5512978135300?text=" + encodeURIComponent(mensagem);
-  window.open(url, "_blank");
+  const telefone = "5512978135300";
+  const link = `https://wa.me/${telefone}?text=${mensagem}`;
+
+  window.open(link, "_blank");
 }
 
-// INICIAR
-atualizarContador();
-renderCarrinho();
+function limparCarrinho() {
+  carrinho = [];
+  salvarCarrinho();
+  renderCarrinho();
+  atualizarContador();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  atualizarContador();
+  renderCarrinho();
+});
