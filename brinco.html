@@ -1,201 +1,265 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Brinco - Lumine Joias</title>
-<meta name="description" content="Categoria de Brinco da Lumine Joias. Peças exclusivas com garantia.">
-<link rel="stylesheet" href="style.css"/>
+<meta name="description" content="Categoria de Brinco da Lumine Joias. Peças exclusivas com garantia." />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header><div class="logo">Lumine Joias</div><div><a class="btn" href="index.html">Voltar</a> <span class="cart-indicator">Carrinho: <span id="cart-count">0</span></span></div></header>
-<section class="section"><h2>Brinco</h2><div class="product-grid">
+
+<header>
+  <div class="logo">Lumine Joias</div>
+  <div>
+    <a class="btn" href="index.html">Voltar</a>
+    <a href="carrinho.html" class="cart-indicator">Carrinho: <span id="cart-count">0</span></a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Brinco</h2>
+
+  <div class="product-grid">
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco1.jpg" alt="Brinco 1"/>
+      <img src="fotos/brincos/brinco1.jpg" alt="Brinco 1" />
       <h3>Brinco 1</h3>
-      <p class="small-note">Valor: R$=42.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 1')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 42,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 1', 42.90, 'fotos/brincos/brinco1.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco2.jpg" alt="Brinco 2"/>
+      <img src="fotos/brincos/brinco2.jpg" alt="Brinco 2" />
       <h3>Brinco 2</h3>
-      <p class="small-note">Valor: R$=44.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 2')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 44,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 2', 44.90, 'fotos/brincos/brinco2.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco3.jpg" alt="Brinco 3"/>
+      <img src="fotos/brincos/brinco3.jpg" alt="Brinco 3" />
       <h3>Brinco 3</h3>
-      <p class="small-note">Valor: R$=28.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 3')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 28,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 3', 28.90, 'fotos/brincos/brinco3.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco4.jpg" alt="Brinco 4"/>
+      <img src="fotos/brincos/brinco4.jpg" alt="Brinco 4" />
       <h3>Brinco 4</h3>
-      <p class="small-note">Valor: R$=42.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 4')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 42,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 4', 42.90, 'fotos/brincos/brinco4.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco5.jpg" alt="Brinco 5"/>
+      <img src="fotos/brincos/brinco5.jpg" alt="Brinco 5" />
       <h3>Brinco 5</h3>
-      <p class="small-note">Valor: R$=55.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 5')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 55,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 5', 55.90, 'fotos/brincos/brinco5.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco6.jpg" alt="Brinco 6"/>
+      <img src="fotos/brincos/brinco6.jpg" alt="Brinco 6" />
       <h3>Brinco 6</h3>
-      <p class="small-note">Valor: R$=12.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 6')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 12,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 6', 12.90, 'fotos/brincos/brinco6.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco7.jpg" alt="Brinco 7"/>
+      <img src="fotos/brincos/brinco7.jpg" alt="Brinco 7" />
       <h3>Brinco 7</h3>
-      <p class="small-note">Valor: R$=47.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 7')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 47,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 7', 47.90, 'fotos/brincos/brinco7.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco8.jpg" alt="Brinco 8"/>
+      <img src="fotos/brincos/brinco8.jpg" alt="Brinco 8" />
       <h3>Brinco 8</h3>
-      <p class="small-note">Valor: R$=34.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 8')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 34,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 8', 34.90, 'fotos/brincos/brinco8.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco9.jpg" alt="Brinco 9"/>
+      <img src="fotos/brincos/brinco9.jpg" alt="Brinco 9" />
       <h3>Brinco 9</h3>
-      <p class="small-note">Valor: R$=59.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 9')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 59,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 9', 59.90, 'fotos/brincos/brinco9.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco10.jpg" alt="Brinco 10"/>
+      <img src="fotos/brincos/brinco10.jpg" alt="Brinco 10" />
       <h3>Brinco 10</h3>
-      <p class="small-note">Valor: R$=63.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 10')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 63,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 10', 63.90, 'fotos/brincos/brinco10.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco11.jpg" alt="Brinco 11"/>
+      <img src="fotos/brincos/brinco11.jpg" alt="Brinco 11" />
       <h3>Brinco 11</h3>
-      <p class="small-note">Valor: R$=10.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 11')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 10,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 11', 10.90, 'fotos/brincos/brinco11.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco12.jpg" alt="Brinco 12"/>
+      <img src="fotos/brincos/brinco12.jpg" alt="Brinco 12" />
       <h3>Brinco 12</h3>
-      <p class="small-note">Valor: R$=27.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 12')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 27,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 12', 27.90, 'fotos/brincos/brinco12.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco13.jpg" alt="Brinco 13"/>
+      <img src="fotos/brincos/brinco13.jpg" alt="Brinco 13" />
       <h3>Brinco 13</h3>
-      <p class="small-note">Valor: R$=42.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 13')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 42,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 13', 42.90, 'fotos/brincos/brinco13.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco14.jpg" alt="Brinco 14"/>
+      <img src="fotos/brincos/brinco14.jpg" alt="Brinco 14" />
       <h3>Brinco 14</h3>
-      <p class="small-note">Valor: R$=14.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 14')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 14,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 14', 14.90, 'fotos/brincos/brinco14.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco15.jpg" alt="Brinco 15"/>
+      <img src="fotos/brincos/brinco15.jpg" alt="Brinco 15" />
       <h3>Brinco 15</h3>
-      <p class="small-note">Valor: R$=16.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 15')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 16,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 15', 16.90, 'fotos/brincos/brinco15.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco16.jpg" alt="Brinco 16"/>
+      <img src="fotos/brincos/brinco16.jpg" alt="Brinco 16" />
       <h3>Brinco 16</h3>
-      <p class="small-note">Valor: R$=77.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 16')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 77,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 16', 77.90, 'fotos/brincos/brinco16.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco17.jpg" alt="Brinco 17"/>
+      <img src="fotos/brincos/brinco17.jpg" alt="Brinco 17" />
       <h3>Brinco 17</h3>
-      <p class="small-note">Valor: R$=65.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 17')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 65,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 17', 65.90, 'fotos/brincos/brinco17.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco18.jpg" alt="Brinco 18"/>
+      <img src="fotos/brincos/brinco18.jpg" alt="Brinco 18" />
       <h3>Brinco 18</h3>
-      <p class="small-note">Valor: R$=19.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 18')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 19,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 18', 19.90, 'fotos/brincos/brinco18.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco19.jpg" alt="Brinco 19"/>
+      <img src="fotos/brincos/brinco19.jpg" alt="Brinco 19" />
       <h3>Brinco 19</h3>
-      <p class="small-note">Valor: R$=41.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 19')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 41,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 19', 41.90, 'fotos/brincos/brinco19.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco20.jpg" alt="Brinco 20"/>
+      <img src="fotos/brincos/brinco20.jpg" alt="Brinco 20" />
       <h3>Brinco 20</h3>
-      <p class="small-note">Valor: R$=87.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 20')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 87,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 20', 87.90, 'fotos/brincos/brinco20.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco21.jpg" alt="Brinco 21"/>
+      <img src="fotos/brincos/brinco21.jpg" alt="Brinco 21" />
       <h3>Brinco 21</h3>
-      <p class="small-note">Valor: R$=43.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 21')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 43,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 21', 43.90, 'fotos/brincos/brinco21.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco22.jpg" alt="Brinco 22"/>
+      <img src="fotos/brincos/brinco22.jpg" alt="Brinco 22" />
       <h3>Brinco 22</h3>
-      <p class="small-note">Valor: R$=24.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 22')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 24,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 22', 24.90, 'fotos/brincos/brinco22.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco23.jpg" alt="Brinco 23"/>
+      <img src="fotos/brincos/brinco23.jpg" alt="Brinco 23" />
       <h3>Brinco 23</h3>
-      <p class="small-note">Valor: R$=16.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 23')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 16,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 23', 16.90, 'fotos/brincos/brinco23.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco24.jpg" alt="Brinco 24"/>
+      <img src="fotos/brincos/brinco24.jpg" alt="Brinco 24" />
       <h3>Brinco 24</h3>
-      <p class="small-note">Valor: R$=10.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 24')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 10,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 24', 10.90, 'fotos/brincos/brinco24.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco25.jpg" alt="Brinco 25"/>
+      <img src="fotos/brincos/brinco25.jpg" alt="Brinco 25" />
       <h3>Brinco 25</h3>
-      <p class="small-note">Valor: R$=19.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 25')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 19,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 25', 19.90, 'fotos/brincos/brinco25.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco26.jpg" alt="Brinco 26"/>
+      <img src="fotos/brincos/brinco26.jpg" alt="Brinco 26" />
       <h3>Brinco 26</h3>
-      <p class="small-note">Valor: R$=59.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 26')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 59,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 26', 59.90, 'fotos/brincos/brinco26.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco27.jpg" alt="Brinco 27"/>
+      <img src="fotos/brincos/brinco27.jpg" alt="Brinco 27" />
       <h3>Brinco 27</h3>
-      <p class="small-note">Valor: R$=25.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 27')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 25,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 27', 25.90, 'fotos/brincos/brinco27.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco28.jpg" alt="Brinco 28"/>
+      <img src="fotos/brincos/brinco28.jpg" alt="Brinco 28" />
       <h3>Brinco 28</h3>
-      <p class="small-note">Valor: R$=63.90</p>
-      <button class="add-btn" onclick="addToCart('Brinco 28')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 63,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 28', 63.90, 'fotos/brincos/brinco28.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco29.jpg" alt="Brinco 29"/>
+      <img src="fotos/brincos/brinco29.jpg" alt="Brinco 29" />
       <h3>Brinco 29</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Brinco 29')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 29,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 29', 29.90, 'fotos/brincos/brinco29.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco30.jpg" alt="Brinco 30"/>
+      <img src="fotos/brincos/brinco30.jpg" alt="Brinco 30" />
       <h3>Brinco 30</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Brinco 30')">Adicionar ao Carrinho</button>
+      <p class="small-note">Valor: R$ 36,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 30', 36.90, 'fotos/brincos/brinco30.jpg')">Adicionar ao Carrinho</button>
     </div>
+
     <div class="product-item">
-      <img src="fotos/brincos/brinco31.jpg" alt="Brinco 31"/>
+      <img src="fotos/brincos/brinco31.jpg" alt="Brinco 31" />
       <h3>Brinco 31</h3>
-      <p class="small-note">Valor: R$ -</p>
-      <button class="add-btn" onclick="addToCart('Brinco 31')">Adicionar ao Carrinho</button>
-    </div></div></section>
-<div style="text-align:center;padding:20px"><button class="btn" onclick="finalizeOrder()">Finalizar Pedido</button> <button class="btn" onclick="clearCart()">Limpar Carrinho</button></div>
-<footer class="footer"><p>© 2025 Lumine Joias</p></footer>
+      <p class="small-note">Valor: R$ 31,90</p>
+      <button class="add-btn" onclick="adicionarCarrinho('Brinco 31', 31.90, 'fotos/brincos/brinco31.jpg')">Adicionar ao Carrinho</button>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align:center;padding:20px">
+  <a class="btn" href="carrinho.html">Abrir Carrinho</a>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Lumine Joias</p>
+</footer>
+
+<a
+  href="https://wa.me/5512978135300?text=Olá!%20Vim%20pelo%20site%20Lumine%20Joias."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp"
+>
+  💬
+</a>
+
 <script src="carrinho.js"></script>
-</body></html>
+</body>
+</html>
